@@ -6,7 +6,7 @@ import "./index.css";
 import store from "./redux/store.js";
 import { Provider } from "react-redux";
 
-store.dispatch({ type: "account/deposit", payload: 100 });
+//store.dispatch({ type: "account/deposit", payload: 100 });
 //console.log(store.getState());
 
 createRoot(document.getElementById("root")).render(
