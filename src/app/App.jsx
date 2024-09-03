@@ -1,8 +1,9 @@
 import { useSelector } from "react-redux";
 import AccountOperations from "../features/accounts/AccountOperations";
-import BalanceDisplay from "../features/accounts/BalanceDisplay";
+
 import CreateCustomer from "../features/customers/CreateCustomer";
 import Customer from "../features/customers/Customer";
+import MapStateToProps from "../features/accounts/mapStateToProps";
 
 function App() {
   const fullName = useSelector((state) => state.customer.fullName);
@@ -16,7 +17,7 @@ function App() {
         <>
           <Customer />
           <AccountOperations />
-          <BalanceDisplay />
+          <MapStateToProps />
         </>
       )}
     </div>

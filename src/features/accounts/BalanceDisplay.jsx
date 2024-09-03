@@ -1,16 +1,14 @@
-import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import formatCurrency from "./FormatCurrency";
 
-function formatCurrency(value) {
-  return new Intl.NumberFormat("en", {
-    style: "currency",
-    currency: "USD",
-  }).format(value);
+function BalanceDisplay({ balance }) {
+
+ 
+  return <div className="balance">{formatCurrency(balance)}</div>;
 }
 
-function BalanceDisplay() {
-  return <div className="balance">{formatCurrency(123_456)}</div>;
-}
+BalanceDisplay.propTypes = {
+  balance: PropTypes.number,
+};
 
-
-
-export default connect() (BalanceDisplay);
+export default BalanceDisplay;
